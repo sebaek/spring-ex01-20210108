@@ -1,5 +1,7 @@
 package org.zerock.controller;
 
+import java.util.Arrays;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +29,19 @@ public class SampleController {
 		
 		return "ex02";
 	}
+	
+	// 133 page
+	@GetMapping("/ex02Array")
+	public String ex02Array(@RequestParam("ids") String[] ids) {
+		log.info("array ids : " + Arrays.toString(ids));
+		
+		return "ex02Array";
+		
+	}
 }
+
+
+
 
 
 

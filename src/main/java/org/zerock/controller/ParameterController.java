@@ -1,5 +1,7 @@
 package org.zerock.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -52,10 +54,19 @@ public class ParameterController {
 	
 	
 	@RequestMapping("/ex6")
-	public void method5(String[] check) {
+	public void method6(String[] check) {
 		log.info("method6");
 		for (String s : check) {
 			log.info(s);
+		}
+	}
+	
+	
+	@RequestMapping("/ex7")
+	public void method7(@RequestParam("check") ArrayList<String> check) {
+		log.info("method7");
+		for (String c : check) {
+			log.info(c);
 		}
 	}
 }
