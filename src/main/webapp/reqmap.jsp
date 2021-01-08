@@ -23,7 +23,7 @@
 
 <hr>
 <h3>/reqmap/ex7, post</h3>
-<form action="" method="">
+<form action="/reqmap/ex7" method="post">
 	<input type="submit" value="전송">
 </form>
 </body>
