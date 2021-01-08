@@ -1,6 +1,8 @@
 package org.zerock.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -34,6 +36,17 @@ public class RequestMappingController {
 	@RequestMapping(value = "/ex5", method = RequestMethod.POST)
 	public void method5() {
 		log.info("method5");
+	}
+	
+	
+	@GetMapping("/ex6")
+	public void method6() {
+		log.info("method6");
+	}
+	
+	@PostMapping("/ex7")
+	public void method7() {
+		log.info("method7");
 	}
 }
 
