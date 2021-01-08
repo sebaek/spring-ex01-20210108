@@ -86,6 +86,12 @@ public class ParameterController {
 		log.info("method8");
 		log.info(member);
 	}
+	
+	@RequestMapping("/ex9")
+	public void method9(Member member) {
+		log.info("method9");
+		log.info(member);
+	}
 }
 
 
