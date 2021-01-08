@@ -1,4 +1,4 @@
-package org.zerock.bean;
+package org.zerock.domain;
 
 import lombok.Data;
 

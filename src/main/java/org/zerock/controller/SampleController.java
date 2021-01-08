@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.zerock.domain.SampleDTO;
+import org.zerock.domain.SampleDTOList;
 
 import lombok.extern.log4j.Log4j;
 
@@ -46,6 +48,23 @@ public class SampleController {
 		log.info("ids: " + ids);
 		
 		return "ex02List";
+	}
+	
+	// 130쪽
+	@GetMapping("/ex01")
+	public String ex01(SampleDTO dto) {
+		log.info("dto : " + dto);
+		
+		return "ex01";
+	}
+	
+	// 134쪽
+	http://localhost:8080/sample/ex02Bean?list[0].name=aaa&list[1].name=bbb
+	// http://localhost:8080/sample/ex02Bean?list%5B0%5D.name=aaa&list%5B1%5D.name=bbb
+	@GetMapping("/ex02Bean")
+	public String ex02Bean(SampleDTOList list) {
+		log.info("list dtos: " + list);
+		return "ex02Bean";
 	}
 }
 
