@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.zerock.bean.Member;
 
 import lombok.extern.log4j.Log4j;
 
@@ -68,6 +69,22 @@ public class ParameterController {
 		for (String c : check) {
 			log.info(c);
 		}
+	}
+	
+	
+	@RequestMapping("/ex8")
+	public void method8(HttpServletRequest request) {
+		String name = request.getParameter("name");
+		String ageStr = request.getParameter("age");
+		int age = Integer.parseInt(ageStr);
+		
+		Member member = new Member();
+		member.setName(name);
+		member.setAge(age);
+		
+		
+		log.info("method8");
+		log.info(member);
 	}
 }
 
