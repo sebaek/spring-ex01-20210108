@@ -59,7 +59,7 @@ public class SampleController {
 	}
 	
 	// 134쪽
-	http://localhost:8080/sample/ex02Bean?list[0].name=aaa&list[1].name=bbb
+	// http://localhost:8080/sample/ex02Bean?list[0].name=aaa&list[1].name=bbb
 	// http://localhost:8080/sample/ex02Bean?list%5B0%5D.name=aaa&list%5B1%5D.name=bbb
 	@GetMapping("/ex02Bean")
 	public String ex02Bean(SampleDTOList list) {
