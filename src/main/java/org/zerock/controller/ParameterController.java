@@ -39,7 +39,25 @@ public class ParameterController {
 		log.info(name);
 	}
 	
+	@RequestMapping("/ex5")
+	public void method5(HttpServletRequest request) {
+		log.info("method5");
+		log.info(request.getParameterValues("check"));
+		
+		String[] list = request.getParameterValues("check");
+		for (String s : list) {
+			log.info(s);
+		}
+	}
 	
+	
+	@RequestMapping("/ex6")
+	public void method5(String[] check) {
+		log.info("method6");
+		for (String s : check) {
+			log.info(s);
+		}
+	}
 }
 
 
