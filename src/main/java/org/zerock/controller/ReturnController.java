@@ -3,6 +3,7 @@ package org.zerock.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.zerock.domain.Member;
 
 import lombok.extern.log4j.Log4j;
 
@@ -40,7 +41,19 @@ public class ReturnController {
 	public void method4() {
 		log.info("method4");
 	}
+	
+	@RequestMapping("/ex5")
+	public void method5() {
+
+		Member member = new Member();
+		member.setName("donald");
+		member.setAge(33);
+
+		// {"name":"donald", "age":33}
+		
+	}
 }
+
 
 
 
