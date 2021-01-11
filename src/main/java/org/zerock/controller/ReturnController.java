@@ -16,6 +16,16 @@ public class ReturnController {
 		log.info("method1");
 		return "returnView1";
 	}
+	
+	
+	@RequestMapping("/ex2")
+	public String method2() {
+		log.info("method2");
+		
+		// 일을 마치면
+		// forward or redirect
+		return "redirect:/sample/";
+	}
 }
 
 
