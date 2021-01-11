@@ -74,15 +74,18 @@ public class SampleController {
 	}
 	
 	// 137 page
+	/*
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
+		binder.registerCustomEditor(java.util.Date.class, new CustomDateEditor(dateFormat, false));
 		
 	}
+	*/
 	
 	// 137 page
 	// /sample/ex03?title=test&dueDate=2018-01-01
+	// /sample/ex03?title=test&dueDate=2018/01/01
 	@GetMapping("/ex03")
 	public String ex03(TodoDTO todo) {
 		log.info("todo: " + todo);
