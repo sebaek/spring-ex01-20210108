@@ -43,7 +43,8 @@ public class ReturnController {
 	}
 	
 	@RequestMapping("/ex5")
-	public void method5() {
+	public @ResponseBody Member method5() {
+		log.info("method5");
 
 		Member member = new Member();
 		member.setName("donald");
@@ -51,6 +52,7 @@ public class ReturnController {
 
 		// {"name":"donald", "age":33}
 		
+		return member;
 	}
 }
 
