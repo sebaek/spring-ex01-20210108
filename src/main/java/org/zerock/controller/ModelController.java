@@ -1,5 +1,7 @@
 package org.zerock.controller;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -73,7 +75,18 @@ public class ModelController {
 		session.setAttribute("myAttr2", "myValue2");
 		rattr.addFlashAttribute("myAttr3", "myValue3");
 		
-		return "redirect:/redirectex1.jsp";
+		return "redirect:ex8";
+	}
+	
+	@RequestMapping("/ex8")
+	public String method8(Model model) {
+		log.info("method8");
+		
+		Map<String, Object> map = model.asMap();
+		log.info(map.get("myattr1"));
+		log.info(map.get("myAttr2"));
+		log.info(map.get("myAttr3"));
+		return "redirectex1";
 	}
 }
 
