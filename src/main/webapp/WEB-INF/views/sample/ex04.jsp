@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>SAMPLEDTO ${sampleDTO }</h2>
+<h2>SAMPLEDTO ${sampleDTO.name } : ${sampleDTO.age }</h2>
 <h2>PAGE ${page }</h2>
 </body>
 </html>
